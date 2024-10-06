@@ -3,7 +3,7 @@ const todoButton = document.querySelector(".submit");
 const todoList = document.querySelector(".todo-list");
 //event listener
 todoButton.addEventListener("click", addTodo);
-//functions
+//function
 function addTodo(event) {
     event.preventDefault();
 
