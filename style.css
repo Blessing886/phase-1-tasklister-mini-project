@@ -1,37 +1,82 @@
-html {
-  height: 100%;
-  width: 100%;
-  font-family: "Titillium Web", sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 body {
-  min-height: 100%;
-  min-width: 100%;
-  background: linear-gradient(pink, violet);
+    background-image: linear-gradient(120deg, rgb(97, 15, 97), rgb(90, 73, 73));
+    color: white;
+    font-family: "poppins", sans-serif;
+    min-height: 100vh;
 }
-
-button {
-  font-size: 7px;
+header {
+    font-size: 1.5rem;
 }
-
-#main-content {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-#list {
-  margin: 10px;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+form button {
+    color: rgb(90, 73, 73);
+    background: white;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+form button:hover {
+    background: rgb(90, 73, 73);
+    color: white;
+}
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.todo li {
+    flex: 1;
+}
+.trash-btn,
+.complete-btn {
+    background: rgb(87, 28, 28);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-btn {
+    background: rgb(26, 92, 26);
+}
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+.done {
+    text-decoration: line-through;
+    opacity: 0.3;
 }
